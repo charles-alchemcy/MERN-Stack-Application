@@ -6,10 +6,8 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install
 COPY . .
-
 # Stage 2: Build the Python environment
 FROM python:3.9 AS python-build
-
 WORKDIR /usr/src/app/python
 
 COPY ./python ./  
